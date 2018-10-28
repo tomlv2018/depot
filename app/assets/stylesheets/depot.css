@@ -49,11 +49,13 @@
 #product_list .list_description dd {
         margin: 0;
 }
+
 #product_list .list_price {
   color:        #100;
   font-weight:  bold;
   font-size:    larger;
 }
+
 #product_list .list_actions {
   font-size:    x-small;
   text-align:   right;
@@ -114,4 +116,3 @@
   font-weight: bold;
   margin-right: 2em;
 }
-
