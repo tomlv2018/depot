@@ -1,4 +1,5 @@
-<h1>Store list</h1>
+<div id="store">
+<h1 class="title">Store list</h1>
     <% @products.each do |product| %>
     <div class="entry">
     <%= image_tag(product.image_url) %> 
@@ -9,3 +10,4 @@
       </div>
     </div>
     <%end%>
+</div>

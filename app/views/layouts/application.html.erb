@@ -10,19 +10,23 @@
   </head>
 
   <body id="store">
-    <div id="banner">
+    <div id="banner" >
       <%= image_tag("logo.png") %>
       <%= @page_title ||"Pragmatic Bookshelf" %>
     </div>
-    <div id="columns">
-      <div id="side">
-        <a  href="home.html">Home</a><br/>
-        <a  href="question.html">Questions</a><br/>
-        <a  href="news.html">News</a><br/>
-        <a  href="contact.html">Contact</a><br/>
+    <div id="columns" >
+      <div id="side" >
+        <a  href="home.html">Home</a> <br/>
+        <a  href="question.html">Questions</a> <br/> 
+        <a  href="news.html">News</a> <br/>  
+        <a  href="contact.html">Contact</a> <br/>
       </div>
-      <div id="main">
+    <div id="main">
     <%= yield %>
+    </div>
+    <div id="bottom" >
+      <p>Progprog Books Online Store</p>
+      <p>Design By tomlv2018</p>
     </div>
     </div>
   </body>
