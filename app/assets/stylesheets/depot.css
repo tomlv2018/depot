@@ -144,17 +144,22 @@
 #main {
   margin-left: 17em;
   padding-top:4ex;
-  padding-left: 2em;
+  padding-left:2em;
   background: white;
+
+
+}
+#main td{
+    text-align:center;
 }
 
 #side{
-  float:left;
   padding-top: 1em;
   padding-left:1em;
   padding-bottom: 1em;
-  width:16em;
   background:#141;
+  width:16em;
+  float:left;
 }
 
 #side a{
@@ -171,4 +176,8 @@
   font:small-caps 40px/40px "Times New Roman", serif;
   color:#282;
   text-align:center;
+}
+
+#store .entry form, #store .entry form div{
+  display:inline;
 }
