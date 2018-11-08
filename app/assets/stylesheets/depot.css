@@ -181,3 +181,7 @@
 #store .entry form, #store .entry form div{
   display:inline;
 }
+
+#side p{
+  color:white;
+}

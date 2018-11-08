@@ -20,7 +20,10 @@
         <a  href="question.html">Questions</a> <br/> 
         <a  href="news.html">News</a> <br/>  
         <a  href="contact.html">Contact</a> <br/>
-        <p>Today is:<%= Date.today() %></p>
+        <p >Today is:<%= Date.today() %></p>
+        <% if @view_count > 5 %>
+        <p>Your browse:<%= @view_count %></p>
+        <% end %>
       </div>
     <div id="main">
     <%= yield %>
