@@ -16,14 +16,11 @@
     </div>
     <div id="columns" >
       <div id="side" >
-        <a  href="home.html">Home</a> <br/>
-        <a  href="question.html">Questions</a> <br/> 
-        <a  href="news.html">News</a> <br/>  
-        <a  href="contact.html">Contact</a> <br/>
+        <%=link_to "Product list" , products_path(@product)%> <br/>
+        <%=link_to "Cart    list" , carts_path(@cart)%> <br/> 
+        <%=link_to "Store   list" , store_path(@store)%> <br/>  
+        <%=link_to "line    item" , line_items_path(@line_items)%><br/>
         <p >Today is:<%= Date.today() %></p>
-        <% if @view_count > 5 %>
-        <p>Your browse:<%= @view_count %></p>
-        <% end %>
       </div>
     <div id="main">
     <%= yield %>

@@ -1,9 +1,27 @@
 <h2> Your Pragmatic Cart </h2>
-<ul>
+<p> Cart no:<%=@cart.id%></p>
+<%cart_value=0%>
+<table>
+	<tr>
+	<th>Picture</th>
+	<th>Description</th>
+	<th>Quantity</th>
+	<th>Price</th>
+	<th>Totall</th>
+</tr>
 	<% @cart.line_items.each do |item| %>
-	<li><%= item.product.title%></li>
+	<tr>
+	<td><%= image_tag(item.product.image_url)%></td>
+	<td ><h3><%= item.product.title%></h3>
+		<%= sanitize(item.product.description)%>
+	</td>
+	<td><%= item.quantity %></td>
+	<td><%= number_to_currency(item.product.price) %></td>
+	<td><%= number_to_currency(item.total_price) %></td>
+	<td><%=link_to 'Delet item',item,method: :delete, data: { confirm: 'You are deleting this item. Are you sure?' } %> </td>
+   </tr>
 	<%end%>
-</ul>
-
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+</table>
+<p style="text-align:right;font-size:1.2em">Cart value is :<%= number_to_currency(@cart.total_price) %> <br>
+<%=link_to 'Empty Cart',@cart,method: :delete, data: { confirm: 'You are deleting the cart. Are you sure?' } %> 
+</p>
